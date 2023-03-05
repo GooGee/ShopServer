@@ -1,0 +1,69 @@
+[
+    {
+        "index": "product",
+        "body": {
+            "mappings": {
+                "properties": {
+                    "id": {
+                        "type": "long"
+                    },
+                    "dtCreate": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm:ss"
+                    },
+                    "dtUpdate": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm:ss"
+                    },
+                    "dtDelete": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm:ss"
+                    },
+                    "name": {
+                        "type": "text"
+                    },
+                    "price": {
+                        "type": "integer"
+                    },
+                    "stock": {
+                        "type": "integer"
+                    },
+                    "discount": {
+                        "type": "integer"
+                    },
+                    "image": {
+                        "type": "text"
+                    },
+                    "imagezz": {
+                        "type": "text"
+                    },
+                    "categoryId": {
+                        "type": "integer"
+                    },
+                    "aaLiked": {
+                        "type": "integer"
+                    },
+                    "aaSold": {
+                        "type": "integer"
+                    },
+                    "rating": {
+                        "type": "float"
+                    },
+                    "ratingzz": {
+                        "type": "text"
+                    },
+                    "dtPublish": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm:ss"
+                    },
+                    "detail": {
+                        "type": "text"
+                    },
+                    "shopId": {
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+]

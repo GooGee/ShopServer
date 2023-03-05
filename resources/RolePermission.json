@@ -1,0 +1,772 @@
+[
+    {
+        "permission": "CreateOneCategory",
+        "entity": "Category",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneCategory",
+        "entity": "Category",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneTag",
+        "entity": "Tag",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneTag",
+        "entity": "Tag",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneTag",
+        "entity": "Tag",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneTag",
+        "entity": "Tag",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyTag",
+        "entity": "Tag",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneAdmin",
+        "entity": "Admin",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneAdmin",
+        "entity": "Admin",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyAdmin",
+        "entity": "Admin",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneAdminSession",
+        "entity": "AdminSession",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneAdminSession",
+        "entity": "AdminSession",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneUser",
+        "entity": "User",
+        "module": "Api"
+    },
+    {
+        "permission": "DeleteManyTag",
+        "entity": "Tag",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneMe",
+        "entity": "Me",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadOneMe",
+        "entity": "Me",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateManyTag",
+        "entity": "Tag",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateManyTag",
+        "entity": "Tag",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyCountry",
+        "entity": "Country",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneCountry",
+        "entity": "Country",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneCountry",
+        "entity": "Country",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneCountry",
+        "entity": "Country",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneCountry",
+        "entity": "Country",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneCategory",
+        "entity": "Category",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneCategory",
+        "entity": "Category",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOnePage",
+        "entity": "Page",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOnePage",
+        "entity": "Page",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOnePage",
+        "entity": "Page",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyPage",
+        "entity": "Page",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneSetting",
+        "entity": "Setting",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneSetting",
+        "entity": "Setting",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneSetting",
+        "entity": "Setting",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneAddress",
+        "entity": "Address",
+        "module": "Api"
+    },
+    {
+        "permission": "CreateOneNotification",
+        "entity": "Notification",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneNotification",
+        "entity": "Notification",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyNotification",
+        "entity": "Notification",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageAdmin",
+        "entity": "Admin",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageCategory",
+        "entity": "Category",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageTag",
+        "entity": "Tag",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageCountry",
+        "entity": "Country",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPagePage",
+        "entity": "Page",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageNotification",
+        "entity": "Notification",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneAddress",
+        "entity": "Address",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadOneAddress",
+        "entity": "Address",
+        "module": "Api"
+    },
+    {
+        "permission": "UpdateOneAddress",
+        "entity": "Address",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadPageAddress",
+        "entity": "Address",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadManyAddress",
+        "entity": "Address",
+        "module": "Api"
+    },
+    {
+        "permission": "CreateOneProduct",
+        "entity": "Product",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneProduct",
+        "entity": "Product",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneProduct",
+        "entity": "Product",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneProduct",
+        "entity": "Product",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageProduct",
+        "entity": "Product",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneTrend",
+        "entity": "Trend",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneProductSku",
+        "entity": "ProductSku",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneAttribute",
+        "entity": "Attribute",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneAttribute",
+        "entity": "Attribute",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneAttribute",
+        "entity": "Attribute",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneAttribute",
+        "entity": "Attribute",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageAttribute",
+        "entity": "Attribute",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneAttributeValue",
+        "entity": "AttributeValue",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneAttributeValue",
+        "entity": "AttributeValue",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneAttributeValue",
+        "entity": "AttributeValue",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneAttributeValue",
+        "entity": "AttributeValue",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageAttributeValue",
+        "entity": "AttributeValue",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneProductSku",
+        "entity": "ProductSku",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneProductSku",
+        "entity": "ProductSku",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneProductSku",
+        "entity": "ProductSku",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageProductSku",
+        "entity": "ProductSku",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneCartProduct",
+        "entity": "CartProduct",
+        "module": "Api"
+    },
+    {
+        "permission": "DeleteOneCartProduct",
+        "entity": "CartProduct",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadOneCartProduct",
+        "entity": "CartProduct",
+        "module": "Api"
+    },
+    {
+        "permission": "UpdateOneCartProduct",
+        "entity": "CartProduct",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadPageCartProduct",
+        "entity": "CartProduct",
+        "module": "Api"
+    },
+    {
+        "permission": "DeleteManyCartProduct",
+        "entity": "CartProduct",
+        "module": "Api"
+    },
+    {
+        "permission": "CreateOneOrder",
+        "entity": "Order",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadOneOrder",
+        "entity": "Order",
+        "module": "Api"
+    },
+    {
+        "permission": "UpdateOneOrder",
+        "entity": "Order",
+        "module": "Api"
+    },
+    {
+        "permission": "CreateOneOrderProduct",
+        "entity": "OrderProduct",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadPageOrder",
+        "entity": "Order",
+        "module": "Api"
+    },
+    {
+        "permission": "CreateOneOrder",
+        "entity": "Order",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneOrder",
+        "entity": "Order",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneOrder",
+        "entity": "Order",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageOrder",
+        "entity": "Order",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneOrderProduct",
+        "entity": "OrderProduct",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneOrderProduct",
+        "entity": "OrderProduct",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyOrderProduct",
+        "entity": "OrderProduct",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneOrderProduct",
+        "entity": "OrderProduct",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadManyOrderProduct",
+        "entity": "OrderProduct",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadManyCategory",
+        "entity": "Category",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneUser",
+        "entity": "User",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyUser",
+        "entity": "User",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneUser",
+        "entity": "User",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneUser",
+        "entity": "User",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneUser",
+        "entity": "User",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageUser",
+        "entity": "User",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageOrderProduct",
+        "entity": "OrderProduct",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyProductSku",
+        "entity": "ProductSku",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyProduct",
+        "entity": "Product",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneLiked",
+        "entity": "Liked",
+        "module": "Api"
+    },
+    {
+        "permission": "DeleteOneLiked",
+        "entity": "Liked",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadOneLiked",
+        "entity": "Liked",
+        "module": "Api"
+    },
+    {
+        "permission": "UpdateOneLiked",
+        "entity": "Liked",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadPageLiked",
+        "entity": "Liked",
+        "module": "Api"
+    },
+    {
+        "permission": "CreateManyLiked",
+        "entity": "Liked",
+        "module": "Api"
+    },
+    {
+        "permission": "DeleteManyLiked",
+        "entity": "Liked",
+        "module": "Api"
+    },
+    {
+        "permission": "ReadManyLiked",
+        "entity": "Liked",
+        "module": "Api"
+    },
+    {
+        "permission": "UpdateManyLiked",
+        "entity": "Liked",
+        "module": "Api"
+    },
+    {
+        "permission": "CreateOneFileInfo",
+        "entity": "FileInfo",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneFileInfo",
+        "entity": "FileInfo",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneFileInfo",
+        "entity": "FileInfo",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneFile",
+        "entity": "File",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageFileInfo",
+        "entity": "FileInfo",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneAdmin",
+        "entity": "Admin",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageRole",
+        "entity": "Role",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneRole",
+        "entity": "Role",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOnePermission",
+        "entity": "Permission",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPagePermission",
+        "entity": "Permission",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneRole",
+        "entity": "Role",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneRole",
+        "entity": "Role",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneRole",
+        "entity": "Role",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneModelHasRole",
+        "entity": "ModelHasRole",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneModelHasRole",
+        "entity": "ModelHasRole",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneRoleHasPermission",
+        "entity": "RoleHasPermission",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneRoleHasPermission",
+        "entity": "RoleHasPermission",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneModelHasPermission",
+        "entity": "ModelHasPermission",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneModelHasPermission",
+        "entity": "ModelHasPermission",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOnePage",
+        "entity": "Page",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneNotification",
+        "entity": "Notification",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneNotification",
+        "entity": "Notification",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageTrend",
+        "entity": "Trend",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneAddress",
+        "entity": "Address",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyAddress",
+        "entity": "Address",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneOperation",
+        "entity": "Operation",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageOperation",
+        "entity": "Operation",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneChart",
+        "entity": "Chart",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyAttribute",
+        "entity": "Attribute",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneAdmin",
+        "entity": "Admin",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageSetting",
+        "entity": "Setting",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneReview",
+        "entity": "Review",
+        "module": "Api"
+    },
+    {
+        "permission": "CreateOneReview",
+        "entity": "Review",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageReview",
+        "entity": "Review",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneReview",
+        "entity": "Review",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneUser",
+        "entity": "User",
+        "module": "Api"
+    },
+    {
+        "permission": "CreateOnePost",
+        "entity": "Post",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPagePost",
+        "entity": "Post",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneVoucher",
+        "entity": "Voucher",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneVoucher",
+        "entity": "Voucher",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadOneVoucher",
+        "entity": "Voucher",
+        "module": "Admin"
+    },
+    {
+        "permission": "UpdateOneVoucher",
+        "entity": "Voucher",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageVoucher",
+        "entity": "Voucher",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadManyVoucher",
+        "entity": "Voucher",
+        "module": "Admin"
+    },
+    {
+        "permission": "CreateOneProductVoucher",
+        "entity": "ProductVoucher",
+        "module": "Admin"
+    },
+    {
+        "permission": "DeleteOneProductVoucher",
+        "entity": "ProductVoucher",
+        "module": "Admin"
+    },
+    {
+        "permission": "ReadPageProductVoucher",
+        "entity": "ProductVoucher",
+        "module": "Admin"
+    }
+]

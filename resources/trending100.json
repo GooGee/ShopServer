@@ -1,0 +1,85 @@
+{
+    "count": 400,
+    "results": [
+        {
+            "listing_id": 484595996,
+            "state": "active",
+            "user_id": 5674258,
+            "category_id": null,
+            "title": "Upper and Lower Case Alphabet Watercolor Brush Lettering worksheets + Practice Drills + Tips - PDF File Only",
+            "description": "",
+            "creation_tsz": 1675353357,
+            "ending_tsz": 1685717757,
+            "original_creation_tsz": 1481393127,
+            "last_modified_tsz": 1675353357,
+            "price": "33.90",
+            "currency_code": "USD",
+            "quantity": 958,
+            "sku": [],
+            "tags": [
+                "blackfriday",
+                "Brush lettering",
+                "worksheets",
+                "practice sheets",
+                "lowercase alphabet",
+                "uppercase alphabet",
+                "watecolor lettering",
+                "modern calligraphy",
+                "lettering practice",
+                "pdf",
+                "printable",
+                "watercolor lettering",
+                "lower-case alphabet"
+            ],
+            "materials": [
+                "digital"
+            ],
+            "shop_section_id": 20505584,
+            "featured_rank": 2,
+            "state_tsz": 1670205834,
+            "url": "https:\/\/www.etsy.com\/listing\/484595996\/upper-and-lower-case-alphabet-watercolor?utm_source=etsymeter&utm_medium=api&utm_campaign=api",
+            "views": 229843,
+            "num_favorers": 4308,
+            "shipping_template_id": null,
+            "processing_min": null,
+            "processing_max": null,
+            "who_made": "i_did",
+            "is_supply": "false",
+            "when_made": "2010_2019",
+            "item_weight": null,
+            "item_weight_unit": "oz",
+            "item_length": null,
+            "item_width": null,
+            "item_height": null,
+            "item_dimensions_unit": "in",
+            "is_private": false,
+            "style": null,
+            "non_taxable": false,
+            "is_customizable": false,
+            "is_digital": true,
+            "file_data": "2 PDF",
+            "should_auto_renew": true,
+            "language": "en-US",
+            "has_variations": false,
+            "taxonomy_id": 562,
+            "taxonomy_path": [
+                "Craft Supplies & Tools"
+            ],
+            "used_manufacturer": false,
+            "is_vintage": false
+        }
+    ],
+    "params": {
+        "limit": 100,
+        "offset": 0,
+        "page": null
+    },
+    "type": "Listing",
+    "pagination": {
+        "effective_limit": 100,
+        "effective_offset": 0,
+        "next_offset": 100,
+        "effective_page": 1,
+        "next_page": 2
+    }
+}
