@@ -8,6 +8,9 @@ namespace Database\Factories;
 use App\Models\Trend;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<Trend>
+ */
 class TrendFactory extends Factory
 {
     /**

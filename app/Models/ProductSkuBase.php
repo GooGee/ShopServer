@@ -17,11 +17,11 @@ namespace App\Models;
  * @property int $stock
  * @property \Illuminate\Database\Eloquent\Casts\ArrayObject $variationzz
  *
- * @property Product product
- * @property CartProduct[] cartProductzz
- * @property OrderProduct[] orderProductzz
- * @property User[] userzz
- * @property Order[] orderzz
+ * @property Product $product
+ * @property CartProduct[] $cartProductzz
+ * @property OrderProduct[] $orderProductzz
+ * @property User[] $userzz
+ * @property Order[] $orderzz
  */
 class ProductSkuBase extends AbstractModel
 {

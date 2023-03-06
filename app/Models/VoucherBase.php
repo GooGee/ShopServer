@@ -20,6 +20,8 @@ namespace App\Models;
  * @property \Illuminate\Support\Carbon|null $dtEnd
  * @property string $name
  *
+ * @property ProductVoucher[] $productVoucherzz
+ * @property Product[] $productzz
  */
 class VoucherBase extends AbstractModel
 {
@@ -73,5 +75,15 @@ class VoucherBase extends AbstractModel
     }
 
 
+
+    public function productVoucherzz()
+    {
+        return $this->hasMany(ProductVoucher::class, 'voucherId');
+    }
+
+    public function productzz()
+    {
+        return $this->belongsToMany(Product::class, 'ProductVoucher', 'voucherId', 'productId');
+    }
 
 }

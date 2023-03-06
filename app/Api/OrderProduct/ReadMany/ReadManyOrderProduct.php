@@ -18,7 +18,7 @@ class ReadManyOrderProduct
     /**
      * @param User $user
      * @param array<int> $idzz
-     * @return \Illuminate\Database\Eloquent\Collection<OrderProduct>
+     * @return \Illuminate\Database\Eloquent\Collection<int, OrderProduct>
      */
     function __invoke(User $user, array $idzz)
     {

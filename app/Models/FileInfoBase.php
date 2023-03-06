@@ -36,6 +36,9 @@ class FileInfoBase extends AbstractModel
      */
     protected $casts = [
 
+        'dtCreate' => 'datetime',
+        'dtUpdate' => 'datetime',
+        'dtDelete' => 'datetime',
     ];
 
     /**

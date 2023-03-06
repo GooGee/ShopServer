@@ -17,8 +17,8 @@ namespace App\Models;
  * @property int $price
  * @property int $productSkuId
  *
- * @property Order order
- * @property ProductSku productSku
+ * @property Order $order
+ * @property ProductSku $productSku
  */
 class OrderProductBase extends AbstractModel
 {

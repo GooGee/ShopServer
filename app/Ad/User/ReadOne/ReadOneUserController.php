@@ -22,9 +22,6 @@ class ReadOneUserController extends AbstractController
         }
 
         $item = $readOne->findOrFail($id);
-        if ($item->dtDelete) {
-            throw new NotFoundHttpException();
-        }
         return CreateOneUserResponse::sendItem($item);
     }
 }

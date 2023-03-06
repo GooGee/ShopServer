@@ -16,7 +16,7 @@ class ReadManyProductSku
 
     /**
      * @param array<int> $idzz
-     * @return \Illuminate\Database\Eloquent\Collection<ProductSku>
+     * @return \Illuminate\Database\Eloquent\Collection<int, ProductSku>
      */
     function __invoke(array $idzz)
     {

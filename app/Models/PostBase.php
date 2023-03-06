@@ -17,9 +17,9 @@ namespace App\Models;
  * @property int|null $userId
  * @property string $text
  *
- * @property Review review
- * @property Admin admin
- * @property User user
+ * @property Review $review
+ * @property Admin $admin
+ * @property User $user
  */
 class PostBase extends AbstractModel
 {

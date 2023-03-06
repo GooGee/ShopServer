@@ -20,9 +20,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property \Illuminate\Support\Carbon|null $dtDelete
  * @property string $moderator
  *
- * @property RoleHasPermission[] roleHasPermissionszz
- * @property ModelHasPermission[] modelHasPermissionszz
- * @property Role[] roleszz
+ * @property RoleHasPermission[] $roleHasPermissionszz
+ * @property ModelHasPermission[] $modelHasPermissionszz
+ * @property Role[] $roleszz
  */
 class PermissionBase extends \Spatie\Permission\Models\Permission
 {

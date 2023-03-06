@@ -8,6 +8,9 @@ namespace Database\Factories;
 use App\Models\FileInfo;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<FileInfo>
+ */
 class FileInfoFactory extends Factory
 {
     /**

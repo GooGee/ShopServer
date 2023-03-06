@@ -13,6 +13,7 @@ namespace App\Models;
  * @property int $model_id
  * @property int $id
  *
+ * @property Permission $permissionzz
  */
 class ModelHasPermissionBase extends AbstractModel
 {

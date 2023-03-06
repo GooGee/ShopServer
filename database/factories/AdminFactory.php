@@ -8,6 +8,9 @@ namespace Database\Factories;
 use App\Models\Admin;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<Admin>
+ */
 class AdminFactory extends Factory
 {
     /**
@@ -40,6 +43,8 @@ class AdminFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
 
             'password' => $this->faker->password(8),
+
+            'remember_token' => null,
 
             'dtSuspend' => null,
 

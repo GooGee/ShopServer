@@ -16,8 +16,8 @@ namespace App\Models;
  * @property int $productSkuId
  * @property int $amount
  *
- * @property User user
- * @property ProductSku productSku
+ * @property User $user
+ * @property ProductSku $productSku
  */
 class CartProductBase extends AbstractModel
 {
@@ -36,6 +36,9 @@ class CartProductBase extends AbstractModel
      */
     protected $casts = [
 
+        'dtCreate' => 'datetime',
+        'dtUpdate' => 'datetime',
+        'dtDelete' => 'datetime',
     ];
 
     /**

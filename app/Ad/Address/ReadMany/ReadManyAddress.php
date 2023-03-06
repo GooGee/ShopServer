@@ -16,7 +16,7 @@ class ReadManyAddress
 
     /**
      * @param array<int> $idzz
-     * @return \Illuminate\Database\Eloquent\Collection<Address>
+     * @return \Illuminate\Database\Eloquent\Collection<int, Address>
      */
     function __invoke(array $idzz)
     {

@@ -15,7 +15,7 @@ namespace App\Models;
  * @property int $attributeId
  * @property string $text
  *
- * @property Attribute attribute
+ * @property Attribute $attribute
  */
 class AttributeValueBase extends AbstractModel
 {
@@ -34,6 +34,9 @@ class AttributeValueBase extends AbstractModel
      */
     protected $casts = [
 
+        'dtCreate' => 'datetime',
+        'dtUpdate' => 'datetime',
+        'dtDelete' => 'datetime',
     ];
 
     /**

@@ -16,7 +16,7 @@ namespace App\Models;
  * @property string $text
  * @property int $adminId
  *
- * @property Admin admin
+ * @property Admin $admin
  */
 class OperationBase extends AbstractModel
 {

@@ -38,6 +38,6 @@ class ReadOneAdminTest extends AbstractAdminTest
         $item->dtDelete = now();
         $item->save();
         $response = $this->getJson($this->makeURI($item->id))
-            ->assertStatus(404);
+            ->assertStatus(200);
     }
 }

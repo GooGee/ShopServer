@@ -19,10 +19,10 @@ namespace App\Models;
  * @property string $phone
  * @property string $text
  *
- * @property Country country
- * @property User user
- * @property Order[] orderzz
- * @property User[] userzz
+ * @property Country $country
+ * @property User $user
+ * @property Order[] $orderzz
+ * @property User[] $userzz
  */
 class AddressBase extends AbstractModel
 {

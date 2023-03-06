@@ -8,6 +8,9 @@ namespace Database\Factories;
 use App\Models\AttributeValue;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<AttributeValue>
+ */
 class AttributeValueFactory extends Factory
 {
     /**

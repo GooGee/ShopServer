@@ -52,7 +52,7 @@ class ImportProduct extends AbstractImportFile
     }
 
     /**
-     * @param array<int, array<int, string>> $datazz
+     * @param array<int, array<string, string>> $datazz
      * @param int $parentId
      * @return void
      */

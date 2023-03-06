@@ -11,7 +11,7 @@ namespace App\Models;
  * @property int $id
  * @property \Illuminate\Support\Carbon $dtCreate
  * @property \Illuminate\Support\Carbon $dtUpdate
- * @property \Illuminate\Support\Carbon $dtDelete
+ * @property \Illuminate\Support\Carbon|null $dtDelete
  * @property string $title
  * @property string $content
  *
@@ -33,6 +33,9 @@ class PageBase extends AbstractModel
      */
     protected $casts = [
 
+        'dtCreate' => 'datetime',
+        'dtUpdate' => 'datetime',
+        'dtDelete' => 'datetime',
     ];
 
     /**

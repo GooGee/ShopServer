@@ -19,11 +19,15 @@ namespace App\Models;
  * @property int $aaOrder
  * @property int $aaSpend
  *
- * @property Address[] addresszz
- * @property Post[] postzz
- * @property CartProduct[] cartProductzz
- * @property Order[] orderzz
- * @property Review[] reviewzz
+ * @property Address[] $addresszz
+ * @property CartProduct[] $cartProductzz
+ * @property Order[] $orderzz
+ * @property Review[] $reviewzz
+ * @property Post[] $postzz
+ * @property Country[] $countryzz
+ * @property ProductSku[] $productSkuzz
+ * @property Product[] $productzz
+ * @property Admin[] $adminzz
  */
 class UserBase extends AbstractUser
 {

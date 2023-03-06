@@ -16,7 +16,7 @@ class ReadManyUser
 
     /**
      * @param array<int> $idzz
-     * @return \Illuminate\Database\Eloquent\Collection<User>
+     * @return \Illuminate\Database\Eloquent\Collection<int, User>
      */
     function __invoke(array $idzz)
     {

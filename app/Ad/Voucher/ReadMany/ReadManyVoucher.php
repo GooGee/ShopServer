@@ -15,7 +15,7 @@ class ReadManyVoucher
 
     /**
      * @param array<int> $idzz
-     * @return \Illuminate\Database\Eloquent\Collection<Voucher>
+     * @return \Illuminate\Database\Eloquent\Collection<int, Voucher>
      */
     function run(array $idzz)
     {

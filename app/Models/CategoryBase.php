@@ -16,8 +16,9 @@ namespace App\Models;
  * @property \Illuminate\Support\Carbon|null $dtDelete
  * @property string $image
  *
- * @property Category parent
- * @property Product[] productzz
+ * @property Category $parent
+ * @property Product[] $productzz
+ * @property Attribute[] $attributezz
  */
 class CategoryBase extends AbstractModel
 {
@@ -74,6 +75,11 @@ class CategoryBase extends AbstractModel
     public function productzz()
     {
         return $this->hasMany(Product::class, 'categoryId');
+    }
+
+    public function attributezz()
+    {
+        return $this->hasMany(Attribute::class, 'categoryId');
     }
 
 }

@@ -14,8 +14,8 @@ namespace App\Models;
  * @property string $name
  * @property \Illuminate\Support\Carbon|null $dtDelete
  *
- * @property Address[] addresszz
- * @property User[] userzz
+ * @property Address[] $addresszz
+ * @property User[] $userzz
  */
 class CountryBase extends AbstractModel
 {

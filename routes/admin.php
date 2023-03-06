@@ -23,6 +23,8 @@ Route::prefix('/v1/Admin')->middleware(['admin', 'throttle:m111'])->group(functi
 
     Route::get('/Address', \App\Ad\Address\ReadMany\ReadManyAddressController::class);
 
+    Route::get('/AddressPage', \App\Ad\Address\ReadPage\ReadPageAddressController::class);
+
     Route::get('/Admin', \App\Ad\Admin\ReadMany\ReadManyAdminController::class);
 
     Route::delete('/Admin/{id}', \App\Ad\Admin\DeleteOne\DeleteOneAdminController::class);

@@ -14,6 +14,9 @@ namespace App\Models;
  * @property \Illuminate\Support\Carbon|null $dtDelete
  * @property int $productId
  * @property int $voucherId
+ *
+ * @property Product $product
+ * @property Voucher $voucher
  */
 class ProductVoucherBase extends AbstractModel
 {

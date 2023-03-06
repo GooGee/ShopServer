@@ -6,7 +6,6 @@ namespace App\Ad\ProductVoucher\DeleteOne;
 
 
 use App\Ad\Operation\CreateOne\CreateOneOperation;
-use App\Ad\ProductVoucher\DeleteOneProductVoucherEvent;
 use Illuminate\Support\Facades\Log;
 
 class DeleteOneProductVoucherListener

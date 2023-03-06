@@ -18,7 +18,7 @@ namespace App\Models;
  * @property string|null $remember_token
  * @property \Illuminate\Support\Carbon|null $dtSuspend
  *
- * @property AdminSession[] adminSessionzz
+ * @property AdminSession[] $adminSessionzz
  */
 class AdminBase extends AbstractUser
 {

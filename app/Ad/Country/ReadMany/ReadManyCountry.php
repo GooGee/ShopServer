@@ -16,7 +16,7 @@ class ReadManyCountry
 
     /**
      * @param array<int> $idzz
-     * @return \Illuminate\Database\Eloquent\Collection<Country>
+     * @return \Illuminate\Database\Eloquent\Collection<int, Country>
      */
     function __invoke(array $idzz)
     {

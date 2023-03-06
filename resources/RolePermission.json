@@ -768,5 +768,10 @@
         "permission": "ReadPageProductVoucher",
         "entity": "ProductVoucher",
         "module": "Admin"
+    },
+    {
+        "permission": "ReadPageAddress",
+        "entity": "Address",
+        "module": "Admin"
     }
 ]

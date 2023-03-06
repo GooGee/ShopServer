@@ -27,11 +27,12 @@ namespace App\Models;
  * @property string $detail
  * @property int $shopId
  *
- * @property Category category
- * @property ProductSku[] productSkuzz
- * @property Review[] reviewzz
- * @property ProductVoucher[] productVoucherzz
- * @property Voucher[] voucherzz
+ * @property Category $category
+ * @property ProductSku[] $productSkuzz
+ * @property Review[] $reviewzz
+ * @property ProductVoucher[] $productVoucherzz
+ * @property User[] $userzz
+ * @property Voucher[] $voucherzz
  */
 class ProductBase extends AbstractModel
 {

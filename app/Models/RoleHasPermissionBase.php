@@ -12,6 +12,8 @@ namespace App\Models;
  * @property int $role_id
  * @property int $id
  *
+ * @property Permission $permissionzz
+ * @property Role $rolezz
  */
 class RoleHasPermissionBase extends AbstractModel
 {

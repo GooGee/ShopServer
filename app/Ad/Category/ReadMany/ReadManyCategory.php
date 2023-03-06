@@ -16,7 +16,7 @@ class ReadManyCategory
 
     /**
      * @param array<int> $idzz
-     * @return \Illuminate\Database\Eloquent\Collection<Category>
+     * @return \Illuminate\Database\Eloquent\Collection<int, Category>
      */
     function __invoke(array $idzz)
     {

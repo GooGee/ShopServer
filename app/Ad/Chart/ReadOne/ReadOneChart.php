@@ -20,10 +20,10 @@ class ReadOneChart
     {
         return (object)[
             'id' => 0,
-            'orderzz' => $this->readMany(Order::getClassName(), $length),
-            'productzz' => $this->readMany(Product::getClassName(), $length),
-            'userzz' => $this->readMany(User::getClassName(), $length),
-            'revenuezz' => $this->readMany(Trend::TypeRevenue, $length),
+            'orderzz' => $this->reduceDay($this->readMany(Order::getClassName(), $length)),
+            'productzz' => $this->reduceDay($this->readMany(Product::getClassName(), $length)),
+            'userzz' => $this->reduceDay($this->readMany(User::getClassName(), $length)),
+            'revenuezz' => $this->reduceDay($this->readMany(Trend::TypeRevenue, $length)),
         ];
     }
 
@@ -34,5 +34,16 @@ class ReadOneChart
             ->take($length)
             ->orderBy('id', 'desc')
             ->get();
+    }
+
+    /**
+     * @param Trend[] $cc
+     */
+    function reduceDay(iterable $cc)
+    {
+        foreach ($cc as $item) {
+            $item->dtCreate = $item->dtCreate->subDay();
+        }
+        return $cc;
     }
 }

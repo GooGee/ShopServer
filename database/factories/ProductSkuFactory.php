@@ -8,6 +8,9 @@ namespace Database\Factories;
 use App\Models\ProductSku;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<ProductSku>
+ */
 class ProductSkuFactory extends Factory
 {
     /**

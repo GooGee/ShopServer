@@ -32,6 +32,9 @@ class NotificationBase extends AbstractModel
      */
     protected $casts = [
 
+        'dtCreate' => 'datetime',
+        'dtUpdate' => 'datetime',
+        'dtDelete' => 'datetime',
     ];
 
     /**

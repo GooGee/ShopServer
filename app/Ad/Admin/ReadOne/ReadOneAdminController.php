@@ -21,10 +21,6 @@ class ReadOneAdminController extends AbstractController
         }
 
         $item = $readOne->findOrFail($id);
-        if ($item->dtDelete) {
-            throw new NotFoundHttpException();
-        }
-
         $item->load(['rolezz', 'permissionzz']);
         return ReadOneAdminResponse::sendItem($item);
     }

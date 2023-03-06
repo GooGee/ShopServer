@@ -15,8 +15,8 @@ namespace App\Models;
  * @property int $categoryId
  * @property string $name
  *
- * @property Category category
- * @property AttributeValue[] attributeValuezz
+ * @property Category $category
+ * @property AttributeValue[] $attributeValuezz
  */
 class AttributeBase extends AbstractModel
 {
@@ -35,6 +35,9 @@ class AttributeBase extends AbstractModel
      */
     protected $casts = [
 
+        'dtCreate' => 'datetime',
+        'dtUpdate' => 'datetime',
+        'dtDelete' => 'datetime',
     ];
 
     /**

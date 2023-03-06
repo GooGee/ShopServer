@@ -20,9 +20,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property \Illuminate\Support\Carbon|null $dtDelete
  * @property bool $isUserCreated
  *
- * @property ModelHasRole[] modelHasRoleszz
- * @property RoleHasPermission[] roleHasPermissionszz
- * @property Permission[] permissionszz
+ * @property ModelHasRole[] $modelHasRoleszz
+ * @property RoleHasPermission[] $roleHasPermissionszz
+ * @property Permission[] $permissionszz
  */
 class RoleBase extends \Spatie\Permission\Models\Role
 {

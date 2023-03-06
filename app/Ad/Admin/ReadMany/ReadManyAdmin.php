@@ -16,7 +16,7 @@ class ReadManyAdmin
 
     /**
      * @param array<int> $idzz
-     * @return \Illuminate\Database\Eloquent\Collection<Admin>
+     * @return \Illuminate\Database\Eloquent\Collection<int, Admin>
      */
     function __invoke(array $idzz)
     {

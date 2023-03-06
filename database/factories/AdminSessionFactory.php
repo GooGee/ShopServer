@@ -8,6 +8,9 @@ namespace Database\Factories;
 use App\Models\AdminSession;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<AdminSession>
+ */
 class AdminSessionFactory extends Factory
 {
     /**

@@ -13,7 +13,7 @@ namespace App\Models;
  * @property \Illuminate\Support\Carbon $dtUpdate
  * @property int $adminId
  *
- * @property Admin admin
+ * @property Admin $admin
  */
 class AdminSessionBase extends AbstractModel
 {
@@ -32,6 +32,8 @@ class AdminSessionBase extends AbstractModel
      */
     protected $casts = [
 
+        'dtCreate' => 'datetime',
+        'dtUpdate' => 'datetime',
     ];
 
     /**

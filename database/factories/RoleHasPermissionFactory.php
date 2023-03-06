@@ -8,6 +8,9 @@ namespace Database\Factories;
 use App\Models\RoleHasPermission;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<RoleHasPermission>
+ */
 class RoleHasPermissionFactory extends Factory
 {
     /**

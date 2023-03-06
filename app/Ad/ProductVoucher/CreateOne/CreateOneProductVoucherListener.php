@@ -6,7 +6,6 @@ namespace App\Ad\ProductVoucher\CreateOne;
 
 
 use App\Ad\Operation\CreateOne\CreateOneOperation;
-use App\Ad\ProductVoucher\CreateOneProductVoucherEvent;
 use Illuminate\Support\Facades\Log;
 
 class CreateOneProductVoucherListener

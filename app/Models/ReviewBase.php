@@ -18,8 +18,11 @@ namespace App\Models;
  * @property int $rating
  * @property int $soi
  *
- * @property User user
- * @property Product product
+ * @property User $user
+ * @property Product $product
+ * @property Post[] $postzz
+ * @property Admin[] $adminzz
+ * @property User[] $userzz
  */
 class ReviewBase extends AbstractModel
 {
@@ -78,6 +81,21 @@ class ReviewBase extends AbstractModel
     public function product()
     {
         return $this->belongsTo(Product::class, 'productId');
+    }
+
+    public function postzz()
+    {
+        return $this->hasMany(Post::class, 'reviewId');
+    }
+
+    public function adminzz()
+    {
+        return $this->belongsToMany(Admin::class, 'Post', 'reviewId', 'adminId');
+    }
+
+    public function userzz()
+    {
+        return $this->belongsToMany(User::class, 'Post', 'reviewId', 'userId');
     }
 
 }

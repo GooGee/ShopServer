@@ -25,10 +25,10 @@ namespace App\Models;
  * @property string $statusPayment
  * @property int $addressId
  *
- * @property User user
- * @property OrderProduct[] orderProductzz
- * @property Address address
- * @property ProductSku[] productSkuzz
+ * @property User $user
+ * @property OrderProduct[] $orderProductzz
+ * @property Address $address
+ * @property ProductSku[] $productSkuzz
  */
 class OrderBase extends AbstractModel
 {
@@ -47,6 +47,16 @@ class OrderBase extends AbstractModel
      */
     protected $casts = [
 
+        'dtCreate' => 'datetime',
+        'dtUpdate' => 'datetime',
+        'dtDelete' => 'datetime',
+        'dtCancel' => 'datetime',
+        'dtExpire' => 'datetime',
+        'dtFulfill' => 'datetime',
+        'dtPay' => 'datetime',
+        'dtReceive' => 'datetime',
+        'dtRefund' => 'datetime',
+        'dtReturn' => 'datetime',
     ];
 
     /**

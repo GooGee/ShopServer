@@ -8,6 +8,9 @@ namespace Database\Factories;
 use App\Models\Voucher;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<Voucher>
+ */
 class VoucherFactory extends Factory
 {
     /**

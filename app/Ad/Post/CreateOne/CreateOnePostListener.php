@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Ad\Post\CreateOne;
 
-use App\Admin\Operation\CreateOne\CreateOneOperation;
+use App\Ad\Operation\CreateOne\CreateOneOperation;
 use Illuminate\Support\Facades\Log;
 
 class CreateOnePostListener
