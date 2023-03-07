@@ -56,18 +56,18 @@ class ReceiveOrderCommand extends Command
 
         $order = $repository->query()
             ->where('status', Order::StatusFulfilled)
-            ->where('statusPayment', Order::StatusPaymentPayed)
+            ->where('statusPayment', Order::StatusPaymentPaid)
             ->where('dtFulfill', '<', now()->subHours(12))
             ->inRandomOrder()
             ->first();
         if (isset($order)) {
             auth()->login($order->user);
-            $result = rand(0, 3);
-            if ($result === 0) { // Return 1/4 order
+            $result = rand(0, 5);
+            if ($result === 0) { // Return 1/6 order
                 $this->info('ReturnOneOrder');
                 $item = $returnOneOrder->__invoke($order->user, $order);
                 $this->info($item->id);
-            } else if ($result & 1) { // Receive 2/4 order
+            } else if ($result & 1) { // Receive 3/6 order
                 $this->info('ReceiveOneOrder');
                 $item = $receiveOneOrder->__invoke($order->user, $order);
                 $this->info($item->id);

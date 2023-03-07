@@ -53,7 +53,7 @@ class CreateTrend
 
             $amount = $this->orderRepository->query()
                 ->where('dtCreate', '<', today())
-                ->where('statusPayment', Order::StatusPaymentPayed)
+                ->where('statusPayment', Order::StatusPaymentPaid)
                 ->sum('sum');
             $this->createOne->__invoke($admin, intval($amount), Trend::TypeRevenue);
         });

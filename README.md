@@ -3,7 +3,27 @@
 🛒 The admin panel built with HTML, Material UI, React, TypeScript, Laravel, MySQL and Elasticsearch. [demo](https://shop.yibu.app/admin.html)
 
 
-## install
+## Features
+
+- Product and sales Management
+- Order and returns Management
+- Customer and staff accounts
+- Discount and vouchers
+- After-sales service
+- Role-based access control
+- Export CSV files
+
+
+## Screenshots
+
+![dashboard](https://raw.githubusercontent.com/GooGee/shop-admin/main/image/chart.png)
+
+![permission](https://raw.githubusercontent.com/GooGee/shop-admin/main/image/permission.png)
+
+![product](https://raw.githubusercontent.com/GooGee/shop-admin/main/image/product.png)
+
+
+## Install
 
 ```bash
 composer install

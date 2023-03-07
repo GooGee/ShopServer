@@ -29,8 +29,8 @@ class CreateOneReviewController extends AbstractController
             ->where('ProductSku.productId', $request->validated('productId'))
             ->orderBy('Order.id', 'desc')
             ->firstOrFail();
-        if ($op->order->statusPayment !== Order::StatusPaymentPayed) {
-            throw new BadRequestHttpException(trans('order.payment.status.not', ['status' => Order::StatusPaymentPayed]));
+        if ($op->order->statusPayment !== Order::StatusPaymentPaid) {
+            throw new BadRequestHttpException(trans('order.payment.status.not', ['status' => Order::StatusPaymentPaid]));
         }
         if (in_array($op->order->status, [Order::StatusFulfilled, Order::StatusReceived, Order::StatusReturned])) {
             // ok

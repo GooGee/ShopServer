@@ -48,7 +48,7 @@ class FulfillOrderCommand extends Command
     {
         $order = $repository->query()
             ->where('status', Order::StatusPlaced)
-            ->where('statusPayment', Order::StatusPaymentPayed)
+            ->where('statusPayment', Order::StatusPaymentPaid)
             ->orderBy('id')
             ->first();
         if (isset($order)) {

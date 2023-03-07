@@ -20,7 +20,7 @@ class PayOneOrder
         }
 
         $item->dtPay = now();
-        $item->statusPayment = Order::StatusPaymentPayed;
+        $item->statusPayment = Order::StatusPaymentPaid;
         $item->save();
 
         event(new PayOneOrderEvent($user, $item));

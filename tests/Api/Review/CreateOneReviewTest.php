@@ -50,16 +50,16 @@ class CreateOneReviewTest extends AbstractReviewTest
         $order->save();
         $response = $this->postJson($this->makeURI(0), $data)
             ->assertStatus(400);
-        $response->assertSeeText(trans('order.payment.status.not', ['status' => Order::StatusPaymentPayed]));
+        $response->assertSeeText(trans('order.payment.status.not', ['status' => Order::StatusPaymentPaid]));
 
-        $order->statusPayment = Order::StatusPaymentPayed;
+        $order->statusPayment = Order::StatusPaymentPaid;
         $order->status = Order::StatusPlaced;
         $order->save();
         $response = $this->postJson($this->makeURI(0), $data)
             ->assertStatus(400);
         $response->assertSeeText(trans('review.not'));
 
-        $order->statusPayment = Order::StatusPaymentPayed;
+        $order->statusPayment = Order::StatusPaymentPaid;
         $order->status = Order::StatusFulfilled;
         $order->save();
         $response = $this->postJson($this->makeURI(0), $data)

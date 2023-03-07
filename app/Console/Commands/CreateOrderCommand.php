@@ -142,7 +142,7 @@ class CreateOrderCommand extends Command
                 $order->dtCancel = $dt->addMinutes(rand(1, 33));
             }
         } else {
-            $order->statusPayment = Order::StatusPaymentPayed;
+            $order->statusPayment = Order::StatusPaymentPaid;
             $order->status = Arr::random([Order::StatusPlaced, Order::StatusFulfilled, Order::StatusReceived, Order::StatusReturned]);
 
             $order->dtPay = $dt->addMinutes(rand(1, 33))->clone();

@@ -64,7 +64,7 @@ class UpdateOneOrderTest extends AbstractOrderTest
             ->assertStatus(400);
         $response->assertSeeText(trans('order.status.not', ['status' => Order::StatusPlaced]));
 
-        $item->statusPayment = Order::StatusPaymentPayed;
+        $item->statusPayment = Order::StatusPaymentPaid;
         $item->status = Order::StatusPlaced;
         $item->save();
         $data = $item->toArray();
@@ -85,9 +85,9 @@ class UpdateOneOrderTest extends AbstractOrderTest
         unset($data['dtReturn']);
         $response = $this->putJson($this->makeURI($item->id), $data)
             ->assertStatus(400);
-        $response->assertSeeText(trans('order.payment.status.not', ['status' => Order::StatusPaymentPayed]));
+        $response->assertSeeText(trans('order.payment.status.not', ['status' => Order::StatusPaymentPaid]));
 
-        $item->statusPayment = Order::StatusPaymentPayed;
+        $item->statusPayment = Order::StatusPaymentPaid;
         $item->status = Order::StatusPlaced;
         $item->save();
         $data = $item->toArray();
@@ -98,7 +98,7 @@ class UpdateOneOrderTest extends AbstractOrderTest
             ->assertStatus(400);
         $response->assertSeeText(trans('order.status.not', ['status' => Order::StatusFulfilled]));
 
-        $item->statusPayment = Order::StatusPaymentPayed;
+        $item->statusPayment = Order::StatusPaymentPaid;
         $item->status = Order::StatusFulfilled;
         $item->save();
         $data = $item->toArray();
@@ -120,9 +120,9 @@ class UpdateOneOrderTest extends AbstractOrderTest
         unset($data['dtReceive']);
         $response = $this->putJson($this->makeURI($item->id), $data)
             ->assertStatus(400);
-        $response->assertSeeText(trans('order.payment.status.not', ['status' => Order::StatusPaymentPayed]));
+        $response->assertSeeText(trans('order.payment.status.not', ['status' => Order::StatusPaymentPaid]));
 
-        $item->statusPayment = Order::StatusPaymentPayed;
+        $item->statusPayment = Order::StatusPaymentPaid;
         $item->status = Order::StatusPlaced;
         $item->save();
         $data = $item->toArray();
@@ -133,7 +133,7 @@ class UpdateOneOrderTest extends AbstractOrderTest
             ->assertStatus(400);
         $response->assertSeeText(trans('order.status.not', ['status' => Order::StatusFulfilled]));
 
-        $item->statusPayment = Order::StatusPaymentPayed;
+        $item->statusPayment = Order::StatusPaymentPaid;
         $item->status = Order::StatusFulfilled;
         $item->save();
         $data = $item->toArray();

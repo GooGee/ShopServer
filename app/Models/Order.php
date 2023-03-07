@@ -12,7 +12,7 @@ class Order extends OrderBase
     const StatusCancelled = 'Cancelled';
 
 
-    const StatusPaymentPayed = 'Payed';
+    const StatusPaymentPaid = 'Paid';
 
     const StatusFulfilled = 'Fulfilled';
     const StatusReceived = 'Received';

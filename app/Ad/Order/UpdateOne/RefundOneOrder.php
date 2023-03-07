@@ -12,8 +12,8 @@ class RefundOneOrder
 {
     public function __invoke(Admin $user, Order $item)
     {
-        if ($item->statusPayment !== Order::StatusPaymentPayed) {
-            throw new BadRequestHttpException(trans('order.payment.status.not', ['status' => Order::StatusPaymentPayed]));
+        if ($item->statusPayment !== Order::StatusPaymentPaid) {
+            throw new BadRequestHttpException(trans('order.payment.status.not', ['status' => Order::StatusPaymentPaid]));
         }
         if ($item->status !== Order::StatusReturned) {
             throw new BadRequestHttpException(trans('order.status.not', ['status' => Order::StatusReturned]));
