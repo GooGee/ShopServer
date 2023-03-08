@@ -1,6 +1,6 @@
 # Shop Server
 
-🛒 The admin panel built with HTML, Material UI, React, TypeScript, Laravel, MySQL and Elasticsearch. [demo](https://shop.yibu.app/admin.html)
+🛒 The admin panel built with Material UI, React, TypeScript, Laravel, MySQL and Elasticsearch. [demo](https://shop.yibu.app/#/login)
 
 
 ## Features
