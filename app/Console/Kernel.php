@@ -46,7 +46,8 @@ class Kernel extends ConsoleKernel
         $schedule->command(CreateOrderCommand::class, $optionzz)->everyMinute()->between($dtStart, $dtEnd)->withoutOverlapping();
         $schedule->command(PayOrderCommand::class, $optionzz)->everyMinute()->between($dtStart, $dtEnd)->withoutOverlapping();
         $schedule->command(ReceiveOrderCommand::class, $optionzz)->everyMinute()->between($dtStart, $dtEnd)->withoutOverlapping();
-        $schedule->command(ReviewOrderCommand::class, $optionzz)->everyMinute()->between($dtStart, $dtEnd)->withoutOverlapping();
+
+        $schedule->command(ReviewOrderCommand::class)->everyTwoHours()->between($dtStart, $dtEnd)->withoutOverlapping();
 
         $schedule->command(FulfillOrderCommand::class)->everyMinute()->between('21:00', $dtEnd)->withoutOverlapping();
 

@@ -14,15 +14,18 @@ use App\Service\AmountPerHour;
 use App\Service\Shopee\ShopeeCrawler;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Log;
 
 class ReviewOrderCommand extends Command
 {
+    const NO_ORDER_PRODUCT_FOUND = 'no order product found';
+    const NO_DATA_IN_RESPONSE = 'no data in response';
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'ReviewOrder {--s}';
+    protected $signature = 'ReviewOrder';
 
     /**
      * The console command description.
@@ -50,13 +53,6 @@ class ReviewOrderCommand extends Command
                            OrderProductRepository $orderProductRepository,
     )
     {
-        if ($this->option('s')) {
-            if (AmountPerHour::with(1) === false || rand(0, 1)) {
-                $this->info('skip');
-                return 0;
-            }
-        }
-
         $opcc = $orderProductRepository->query()
             ->leftJoin('ProductSku', 'ProductSku.id', '=', 'OrderProduct.productSkuId')
             ->with(['order.user', 'productSku'])
@@ -70,7 +66,8 @@ class ReviewOrderCommand extends Command
             ->get();
 
         if ($opcc->isEmpty()) {
-            $this->error('no product in db');
+            $this->error(self::NO_ORDER_PRODUCT_FOUND);
+            Log::error(self::NO_ORDER_PRODUCT_FOUND);
             return 0;
         }
 
@@ -80,6 +77,7 @@ class ReviewOrderCommand extends Command
         $response = json_decode($crawler->body);
         if (isset($response->data->ratings)) {
             $dt = now();
+            $dt->addMinutes(rand(0, 111));
             foreach ($response->data->ratings as $key => $data) {
                 if ($key === $opcc->count()) {
                     break;
@@ -102,7 +100,8 @@ class ReviewOrderCommand extends Command
             }
             $this->info('ok');
         } else {
-            $this->error('no data in response');
+            $this->error(self::NO_DATA_IN_RESPONSE);
+            Log::error(self::NO_DATA_IN_RESPONSE);
         }
         return 0;
     }

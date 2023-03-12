@@ -28,7 +28,7 @@ class CreateOneFileInfoTest extends AbstractFileInfoTest
             ->assertStatus(422);
         $this->seeErrors(['uri'], $response);
 
-        $item->uri = config('app.url') . '/favicon.ico';
+        $item->uri = config('app.url') . '/blank1x1.png';
         $data = $item->toArray();
         $response = $this->postJson($this->makeURI(0), $data)
             ->assertStatus(403);
