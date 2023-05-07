@@ -16,7 +16,7 @@ class ReadOneChartRequest extends AbstractRequest
                 'required',
                 'integer',
                 'min:14',
-                'max:60',
+                'max:61',
             ],
 
 
