@@ -51,7 +51,8 @@ class ShopeeCrawlProductCommand extends Command
         if ($categoryId === 0) {
             $category = $categoryRepository->query()
                 ->where('parentId', '>', Category::RootId)
-                ->doesntHave('productzz')
+//                ->doesntHave('productzz')
+                ->inRandomOrder()
                 ->first();
             if (is_null($category)) {
                 $this->error('no data in Category table');
