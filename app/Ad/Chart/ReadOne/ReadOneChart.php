@@ -8,20 +8,47 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\Trend;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Collection;
 
 class ReadOneChart
 {
     function __invoke(int $length)
     {
+        $orderzz = $this->reduceDay($this->readMany(Order::getClassName(), $length));
+        $productzz = $this->reduceDay($this->readMany(Product::getClassName(), $length));
+        $userzz = $this->reduceDay($this->readMany(User::getClassName(), $length));
+        $revenuezz = $this->reduceDay($this->readMany(Trend::TypeRevenue, $length));
+
+        $monthSum = $this->readSumAll();
+        if ($orderzz->count()) {
+            $monthSum['orderzz']->add($orderzz->first());
+        }
+        $monthSum['orderzz'] = $monthSum['orderzz']->reverse()->values();
+
+        if ($productzz->count()) {
+            $monthSum['productzz']->add($productzz->first());
+        }
+        $monthSum['productzz'] = $monthSum['productzz']->reverse()->values();
+
+        if ($userzz->count()) {
+            $monthSum['userzz']->add($userzz->first());
+        }
+        $monthSum['userzz'] = $monthSum['userzz']->reverse()->values();
+
+        if ($revenuezz->count()) {
+            $monthSum['revenuezz']->add($revenuezz->first());
+        }
+        $monthSum['revenuezz'] = $monthSum['revenuezz']->reverse()->values();
+
         return (object)[
             'id' => 0,
-            'orderzz' => $this->reduceDay($this->readMany(Order::getClassName(), $length)),
-            'productzz' => $this->reduceDay($this->readMany(Product::getClassName(), $length)),
-            'userzz' => $this->reduceDay($this->readMany(User::getClassName(), $length)),
-            'revenuezz' => $this->reduceDay($this->readMany(Trend::TypeRevenue, $length)),
+            'orderzz' => $orderzz,
+            'productzz' => $productzz,
+            'userzz' => $userzz,
+            'revenuezz' => $revenuezz,
 
             'orderCount' => $this->countOrderAll(),
-            'monthSum' => $this->readSumAll(),
+            'monthSum' => $monthSum,
         ];
     }
 
@@ -44,7 +71,7 @@ class ReadOneChart
             ->count();
     }
 
-    function readMany(string $type, int $length)
+    function readMany(string $type, int $length): Collection
     {
         return Trend::query()
             ->where('type', $type)
@@ -65,7 +92,7 @@ class ReadOneChart
         ];
     }
 
-    function readSum(string $type, string $date)
+    function readSum(string $type, string $date): Collection
     {
         $tcc = Trend::query()
             ->select(\DB::raw('Min(id) id'))
@@ -80,14 +107,10 @@ class ReadOneChart
             ->where('type', $type)
             ->whereNull('dtDelete')
             ->whereIn('id', $tcc->pluck('id'))
-            ->orderByDesc('id')
             ->get();
     }
 
-    /**
-     * @param Trend[] $cc
-     */
-    function reduceDay(iterable $cc)
+    function reduceDay(Collection $cc)
     {
         foreach ($cc as $item) {
             $item->dtCreate = $item->dtCreate->subDay();
