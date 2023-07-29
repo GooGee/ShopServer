@@ -8,14 +8,9 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\Trend;
 use App\Models\User;
-use App\Repository\TrendRepository;
 
 class ReadOneChart
 {
-    public function __construct(private TrendRepository $trendRepository)
-    {
-    }
-
     function __invoke(int $length)
     {
         return (object)[
@@ -24,15 +19,68 @@ class ReadOneChart
             'productzz' => $this->reduceDay($this->readMany(Product::getClassName(), $length)),
             'userzz' => $this->reduceDay($this->readMany(User::getClassName(), $length)),
             'revenuezz' => $this->reduceDay($this->readMany(Trend::TypeRevenue, $length)),
+
+            'orderCount' => $this->countOrderAll(),
+            'monthSum' => $this->readSumAll(),
         ];
+    }
+
+    function countOrderAll()
+    {
+        return [
+            Order::StatusPlaced => $this->countOrder(Order::StatusPlaced),
+            Order::StatusCancelled => $this->countOrder(Order::StatusCancelled),
+            Order::StatusFulfilled => $this->countOrder(Order::StatusFulfilled),
+            Order::StatusReceived => $this->countOrder(Order::StatusReceived),
+            Order::StatusReturned => $this->countOrder(Order::StatusReturned),
+        ];
+    }
+
+    function countOrder(string $status)
+    {
+        return Order::query()
+            ->where('status', $status)
+            ->whereNull('dtDelete')
+            ->count();
     }
 
     function readMany(string $type, int $length)
     {
-        return $this->trendRepository->query()
+        return Trend::query()
             ->where('type', $type)
+            ->whereNull('dtDelete')
             ->take($length)
-            ->orderBy('id', 'desc')
+            ->orderByDesc('id')
+            ->get();
+    }
+
+    function readSumAll()
+    {
+        $date = today()->day(1)->subYear()->toDateString();
+        return [
+            'orderzz' => $this->reduceDay($this->readSum(Order::getClassName(), $date)),
+            'productzz' => $this->reduceDay($this->readSum(Product::getClassName(), $date)),
+            'userzz' => $this->reduceDay($this->readSum(User::getClassName(), $date)),
+            'revenuezz' => $this->reduceDay($this->readSum(Trend::TypeRevenue, $date)),
+        ];
+    }
+
+    function readSum(string $type, string $date)
+    {
+        $tcc = Trend::query()
+            ->select(\DB::raw('Min(id) id'))
+            ->where('type', $type)
+            ->whereNull('dtDelete')
+            ->where('dtCreate', '>', $date)
+            ->groupBy(\DB::raw('Year(dtCreate), Month(dtCreate)'))
+            ->orderByDesc('id')
+            ->take(12)
+            ->get();
+        return Trend::query()
+            ->where('type', $type)
+            ->whereNull('dtDelete')
+            ->whereIn('id', $tcc->pluck('id'))
+            ->orderByDesc('id')
             ->get();
     }
 
