@@ -54,20 +54,22 @@ class ReadOneChart
 
     function countOrderAll()
     {
+        $date = today()->subMonth()->toDateString();
         return [
-            Order::StatusPlaced => $this->countOrder(Order::StatusPlaced),
-            Order::StatusCancelled => $this->countOrder(Order::StatusCancelled),
-            Order::StatusFulfilled => $this->countOrder(Order::StatusFulfilled),
-            Order::StatusReceived => $this->countOrder(Order::StatusReceived),
-            Order::StatusReturned => $this->countOrder(Order::StatusReturned),
+            Order::StatusPlaced => $this->countOrder(Order::StatusPlaced, $date),
+            Order::StatusCancelled => $this->countOrder(Order::StatusCancelled, $date),
+            Order::StatusFulfilled => $this->countOrder(Order::StatusFulfilled, $date),
+            Order::StatusReceived => $this->countOrder(Order::StatusReceived, $date),
+            Order::StatusReturned => $this->countOrder(Order::StatusReturned, $date),
         ];
     }
 
-    function countOrder(string $status)
+    function countOrder(string $status, string $date)
     {
         return Order::query()
             ->where('status', $status)
             ->whereNull('dtDelete')
+            ->where('dtCreate', '>', $date)
             ->count();
     }
 
