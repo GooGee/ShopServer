@@ -83,7 +83,7 @@ class CreateUserCommand extends Command
         /** @var User[] $userzz */
         $userzz = [];
         foreach ($namezz as $name) {
-            if (rand(0, 3)) {
+            if (rand(0, 1)) {
                 $name = $name . rand(0, 9888);
             }
             $userzz[] = $createOneUser($name, $name . '@' . Arr::random(self::Mailzz), strval(rand(111222, 1222333)));
