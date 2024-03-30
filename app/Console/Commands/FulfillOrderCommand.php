@@ -46,9 +46,11 @@ class FulfillOrderCommand extends Command
                            AdminRepository $adminRepository,
                            OrderRepository $repository,)
     {
+        /** @var Order|null $order */
         $order = $repository->query()
             ->where('status', Order::StatusPlaced)
             ->where('statusPayment', Order::StatusPaymentPaid)
+            ->where('dtPay', '<', now()->subHours(6))
             ->orderBy('id')
             ->first();
         if (isset($order)) {
