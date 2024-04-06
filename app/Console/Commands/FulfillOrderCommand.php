@@ -50,7 +50,7 @@ class FulfillOrderCommand extends Command
         $order = $repository->query()
             ->where('status', Order::StatusPlaced)
             ->where('statusPayment', Order::StatusPaymentPaid)
-            ->where('dtPay', '<', now()->subHours(6))
+            ->where('dtPay', '<', now()->subHours(12))
             ->orderBy('id')
             ->first();
         if (isset($order)) {
